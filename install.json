@@ -3,19 +3,19 @@
     {
       "method": "shell.run",
       "params": {
-        "message": "git clone https://github.com/lllyasviel/Fooocus"
+        "message": "git clone https://github.com/MoonRide303/Fooocus-MRE"
       }
     }, {
       "method": "shell.run",
       "params": {
         "message": "{{os.platform() === 'win32' ? 'python' : 'python3'}} -m venv env",
-        "path": "Fooocus"
+        "path": "Fooocus-mre"
       }
     },
     {
       "method": "shell.start",
       "params": {
-        "path": "Fooocus"
+        "path": "Fooocus-mre"
       }
     },
     {
@@ -88,7 +88,7 @@
     {
       "method": "browser.open",
       "params": {
-        "uri": "/?selected=Fooocus"
+        "uri": "/?selected=Fooocus-mre"
       }
     }
   ]
