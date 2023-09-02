@@ -5,11 +5,11 @@ const exists = (filepath) => {
   return new Promise(r=>fs.access(filepath, fs.constants.F_OK, e => r(!e)))
 }
 module.exports = {
-  title: "Fooocus",
-  description: "Minimal Stable Diffusion UI",
+  title: "Fooocus-MRE",
+  description: "Minimal Stable Diffusion UI (MRE fork)",
   icon: "icon.jpeg",
   menu: async (kernel) => {
-    let installed = await exists(path.resolve(__dirname, "Fooocus"))
+    let installed = await exists(path.resolve(__dirname, "Fooocus-mre"))
     if (installed) {
       let session = (await kernel.loader.load(path.resolve(__dirname, "session.json"))).resolved
       return [{
@@ -22,7 +22,7 @@ module.exports = {
         href: "start.json?fullscreen=true&run=true",
       }, {
         when: "start.json",
-        on: "<i class='fa-solid fa-rocket'></i> Open Fooocus",
+        on: "<i class='fa-solid fa-rocket'></i> Open Fooocus-MRE",
         href: (session && session.url ? session.url : "http://127.0.0.1:7860"),
         target: "_blank"
       }, {
